@@ -1,5 +1,5 @@
-import React from "react";
 import styled from "styled-components";
+
 const H1 = styled.h1`
   font-family: "Raleway", sans-serif;
   font-size: 1.5rem;

@@ -21,11 +21,11 @@ const profileData = {
     description: '',
 }
 
-let type = '';
+function PostAForm(props) {
 
-function CreateJobPost() {
-    type = "profile"
-    const [previewData, setPreviewData] = useState('');
+    let type = props.type;
+    let data = type === "job" ? jobData : profileData;
+    const [previewData, setPreviewData] = useState(data);
 
     const handleInputChange = (event) => {
         let value = event.target.value;
@@ -37,8 +37,34 @@ function CreateJobPost() {
         });
     }
 
-    const form = type === "job" ? <PostAJobForm handleInputChange={handleInputChange} /> : <PostAProfileForm handleInputChange=
-    {handleInputChange} />;
+    const handleFormSubmit = async (event) => {
+
+        event.preventDefault();
+        const formData = {...previewData};
+
+        // try {
+        //     const response = await fetch('../utils/', {
+        //       method: 'POST',
+        //       headers: {
+        //         'Content-Type': 'application/json',
+        //       },
+        //       body: JSON.stringify(formData),
+        //     });
+      
+        //     if (!response.ok) {
+        //       throw new Error('Network response was not ok');
+        //     }
+      
+        //     // Optionally handle response data here
+        //     const responseData = await response.json();
+        //     console.log('Response from server:', responseData);
+        //   } catch (error) {
+        //     console.error('Error:', error);
+        // }
+    }
+
+    const form = type === "job" ? <PostAJobForm handleInputChange={handleInputChange} handleFormSubmit={handleFormSubmit} /> : <PostAProfileForm handleInputChange=
+    {handleInputChange} handleFormSubmit={handleFormSubmit} />;
 
     return (
         <div>
@@ -48,4 +74,4 @@ function CreateJobPost() {
     )
 }
 
-export default CreateJobPost;
+export default PostAForm;
