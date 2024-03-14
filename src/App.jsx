@@ -3,7 +3,7 @@ import CreatePost from "./pages/PostAForm"
 function App() {
   return (
     <>
-    <CreatePost></CreatePost>
+    {/* <CreatePost></CreatePost> */}
     </>
   )
 }
