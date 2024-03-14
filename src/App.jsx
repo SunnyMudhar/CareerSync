@@ -1,11 +1,24 @@
-import CreatePost from "./pages/PostAForm"
+import CreatePost from "./pages/PostAForm";
+import React from "react";
+import NavBar from "./components/NavBar/navbar.jsx";
+import styled from "styled-components";
+import Wave from "./components/Wave/Wave.jsx";
+import Home from "./pages/Home.jsx";
+const AppContainer = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+`;
 
-function App() {
+const App = () => {
   return (
-    <>
-    {/* <CreatePost></CreatePost> */}
-    </>
-  )
-}
+    <AppContainer>
+      <NavBar />
+      {/* <Wave /> */}
+      <Home />
+      <CreatePost />
+    </AppContainer>
+  );
+};
 
-export default App
+
+export default App;
