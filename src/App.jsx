@@ -5,9 +5,10 @@ import Wave from "./components/Wave/Wave.jsx";
 import FindJob from "./pages/FindaJob.jsx";
 import Home from "./pages/Home.jsx";
 import PostAForm from "./pages/PostAForm.jsx";
+
 const AppContainer = styled.div`
-  max-width: 1200px;
   margin: 0 auto;
+  padding: 0;
 `;
 
 const App = () => {
@@ -16,9 +17,9 @@ const App = () => {
       <Router>
         <NavBar />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/postajob' element={<PostAForm type='job'/>} />
-          <Route path='/postaprofile' element={<PostAForm type='profile'/>} />
+          <Route path="/" exact element={<Home />} />
+          <Route path="/postajob" element={<PostAForm type="job" />} />
+          <Route path="/postaprofile" element={<PostAForm type="profile" />} />
         </Routes>
       </Router>
       {/* <Wave /> */}
@@ -28,6 +29,5 @@ const App = () => {
     </AppContainer>
   );
 };
-
 
 export default App;
