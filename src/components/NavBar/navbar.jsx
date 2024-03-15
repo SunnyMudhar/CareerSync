@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import styled from "styled-components";
 
 const Nav = styled.nav`
@@ -80,37 +81,31 @@ const NavBar = () => {
 
   return (
     <Nav>
-      <Logo>CAREERSYNC</Logo>
+      <Link to='/'><Logo>CAREERSYNC</Logo></Link>
       <MobileNavToggle onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}>
         {isMobileNavOpen ? "Close" : "Menu"}
       </MobileNavToggle>
       <DesktopNav>
-        <NavItem>
-          <a href="/">Home</a>
-        </NavItem>
-        <NavItem>
-          <a href="/">FIND A JOB</a>
-        </NavItem>
-        <NavItem>
-          <a href="/">POST A JOB</a>
-        </NavItem>
-        <NavItem>
+        <NavLink to='/findajob'>
+          <a href="">FIND A JOB</a>
+        </NavLink>
+        <NavLink to='/postajob'>
+          <a href="/postaform">POST A JOB</a>
+        </NavLink>
+        <NavLink to='/postaprofile'>
           <a href="/">POST A PROFILE</a>
-        </NavItem>
+        </NavLink>
       </DesktopNav>
       <MobileNav style={{ display: isMobileNavOpen ? "flex" : "none" }}>
-        <NavItem>
-          <a href="/">Home</a>
-        </NavItem>
-        <NavItem>
-          <a href="/">FIND A JOB</a>
-        </NavItem>
-        <NavItem>
+        <NavLink to='/findajob'>
+          <a href="">FIND A JOB</a>
+        </NavLink>
+        <NavLink to='/postajob'>
           <a href="/">POST A JOB</a>
-        </NavItem>
-        <NavItem>
+        </NavLink>
+        <NavLink to='/postaprofile'>
           <a href="/">POST A PROFILE</a>
-        </NavItem>
+        </NavLink>
       </MobileNav>
     </Nav>
   );

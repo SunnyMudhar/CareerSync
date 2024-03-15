@@ -53,6 +53,7 @@ function PostAJobForm(props) {
                 placeholder="Job Description"
                 />
             </div>
+            <button onClick={props.handleFormSubmit}>Submit</button>
         </form>
     );
 }
