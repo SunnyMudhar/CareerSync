@@ -1,6 +1,4 @@
-// App.js
 import React, { useState } from 'react';
-import { getJobs } from './server'; // Assuming you have the server-side script in the same directory
 
 const App = () => {
   const [query, setQuery] = useState('');

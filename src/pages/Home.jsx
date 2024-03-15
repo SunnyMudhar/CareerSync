@@ -77,20 +77,20 @@ const HomeBtn = styled.div`
     }
   }
 `;
+
 const Home = () => {
   return (
     <>
       <Homediv>
         <H1>CONNECTING THE RIGHT TALENT TO THE RIGHT ORGANISATION</H1>
         <HomeBtn>
-          <NavLink to="/findajob">
+          <Link to="/findajob">
             <button className="button-a">SEARCH TALENT</button>
-          </NavLink>
-          <NavLink to="/postajob">
+          </Link>
+          <Link to="/postajob">
             <button className="button-b">SEARCH JOB</button>
-          </NavLink>
+          </Link>
         </HomeBtn>
-        Home Welcome
       </Homediv>
     </>
   );
