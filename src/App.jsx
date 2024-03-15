@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar/navbar.jsx";
 import styled from "styled-components";
 import Wave from "./components/Wave/Wave.jsx";
+import FindJob from "./pages/FindaJob.jsx";
 import Home from "./pages/Home.jsx";
 import PostAForm from "./pages/PostAForm.jsx";
 const AppContainer = styled.div`
@@ -21,6 +22,9 @@ const App = () => {
         </Routes>
       </Router>
       {/* <Wave /> */}
+      <FindJob />
+      <Home />
+      <CreatePost />
     </AppContainer>
   );
 };
