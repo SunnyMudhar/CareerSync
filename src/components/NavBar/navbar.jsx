@@ -1,113 +1,58 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import styled from "styled-components";
-
-const Nav = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  width: 100%;
-  max-height: 100px;
-
-  background-color: rgb(63, 188, 248);
-  color: #353535;
-  padding: 1rem 2rem;
-`;
-
-const NavItem = styled.li`
-  list-style: none;
-  margin: 0 1rem;
-  font-family: "Raleway", sans-serif;
-
-  a {
-    color: #353535;
-    text-decoration: none;
-    transition: all 0.3s ease;
-
-    &:hover {
-      color: #d9d9d9;
-    }
-  }
-`;
-
-const Logo = styled.h1`
-  font-family: "Raleway", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin: 0;
-`;
-
-const MobileNavToggle = styled.button`
-  display: block;
-  background-color: transparent;
-  border: none;
-  color: #d9d9d9;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-
-  &:hover {
-    color: #bada55;
-  }
-
-  @media (min-width: 768px) {
-    display: none;
-  }
-`;
-
-const DesktopNav = styled.ul`
-  display: flex;
-  flex-direction: row;
-
-  @media (max-width: 767px) {
-    display: none;
-  }
-`;
-
-const MobileNav = styled.ul`
-  display: none;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-
-  @media (max-width: 767px) {
-    display: flex;
-  }
-`;
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
+import "./navbar.css";
 
 const NavBar = () => {
-  const [isMobileNavOpen, setIsMobileNavOpen] = React.useState(false);
-
   return (
-    <Nav>
-      <Link to='/'><Logo>CAREERSYNC</Logo></Link>
-      <MobileNavToggle onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}>
-        {isMobileNavOpen ? "Close" : "Menu"}
-      </MobileNavToggle>
-      <DesktopNav>
-        <NavLink to='/findajob'>
-          <a href="">FIND A JOB</a>
-        </NavLink>
-        <NavLink to='/postajob'>
-          <a href="/postaform">POST A JOB</a>
-        </NavLink>
-        <NavLink to='/postaprofile'>
-          <a href="/">POST A PROFILE</a>
-        </NavLink>
-      </DesktopNav>
-      <MobileNav style={{ display: isMobileNavOpen ? "flex" : "none" }}>
-        <NavLink to='/findajob'>
-          <a href="">FIND A JOB</a>
-        </NavLink>
-        <NavLink to='/postajob'>
-          <a href="/">POST A JOB</a>
-        </NavLink>
-        <NavLink to='/postaprofile'>
-          <a href="/">POST A PROFILE</a>
-        </NavLink>
-      </MobileNav>
-    </Nav>
+    <>
+      <nav className="navbar sticky-top navbar-expand-lg bg-light">
+        <div className="container-fluid">
+          <div className="navbar-brand">
+            <Link to="/">
+              <img
+                className="logo"
+                src="src/assets/Logo.png"
+                alt="Logo"
+                width="100"
+              />
+            </Link>
+            <h4 className="logo-text">CAREERSYNC</h4>
+          </div>
+          <button
+            type="button"
+            className="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div
+            className="collapse navbar-collapse justify-content-end"
+            id="navbarCollapse"
+          >
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <NavLink className="linkage" to="/findajob">
+                  FIND A JOB
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink className="linkage" to="/postajob">
+                  POST A JOB
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink className="linkage" to="/postaprofile">
+                  POST A PROFILE
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </>
   );
 };
 
