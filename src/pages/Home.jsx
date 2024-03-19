@@ -1,13 +1,14 @@
 import styled from "styled-components";
-import { Link, NavLink } from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import ControlledCarousel from "../components/Carousel";
 const Homediv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80vh;
   background-color: rgb(69, 91, 181);
+  width: 100vw;
+  height: 40vh;
 `;
 const H1 = styled.h1`
   font-family: "Raleway", sans-serif;
@@ -15,24 +16,13 @@ const H1 = styled.h1`
   font-weight: 400;
   margin: 0;
   color: #ffffff;
-  position: relative;
-  top: -20vh;
-  right: -20vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 400px;
-  height: 80px;
+  justify-content: end;
 `;
 const HomeBtn = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  top: -20vh;
-  right: -20vw;
+  align-items: right;
+  justify-content: right;
   width: 600px;
   height: 80px;
   .button-a {
@@ -81,7 +71,7 @@ const HomeBtn = styled.div`
 const Home = () => {
   return (
     <>
-      <Homediv>
+      <Homediv className="container-fluid">
         <H1>CONNECTING THE RIGHT TALENT TO THE RIGHT ORGANISATION</H1>
         <HomeBtn>
           <Link to="/findajob">
@@ -92,6 +82,7 @@ const Home = () => {
           </Link>
         </HomeBtn>
       </Homediv>
+      <ControlledCarousel className="container" />
     </>
   );
 };
