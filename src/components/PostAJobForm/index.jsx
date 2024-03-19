@@ -1,60 +1,97 @@
 import "./style.css";
+import React from 'react';
 
 function PostAJobForm(props) {
     return (
         <form>
-            <div>
-                <label>Title</label>
+        {/* <div className='row mt-3'>
+            <h1 className='form-heading'>Create Job Posting</h1>
+        </div> */}
+        <div className="form-group row mt-3 mb-3">
+            <label className="col-sm-2 col-form-label">Title</label>
+            <div className="col-sm-10">
                 <input
-                value={props.title}
-                name="title"
-                onChange={props.handleInputChange}
-                type="text"
-                placeholder="Job Title"
-                />
-                <label>Company</label>
-                <input
-                value={props.title}
-                name="company"
-                onChange={props.handleInputChange}
-                type="text"
-                placeholder="Company Name"
-                />
-                <label>Location</label>
-                <input
-                value={props.title}
-                name="location"
-                onChange={props.handleInputChange}
-                type="text"
-                placeholder="Location"
-                />
-                <label>Salary</label>
-                <input
-                value={props.title}
-                name="salary"
-                onChange={props.handleInputChange}
-                type="text"
-                placeholder="Salary"
-                />
-                <label>Start Date</label>
-                <input
-                value={props.title}
-                name="startDate"
-                onChange={props.handleInputChange}
-                type="text"
-                placeholder="Start Date"
-                />
-                <label>Description</label>
-                <input
-                value={props.title}
-                name="description"
-                onChange={props.handleInputChange}
-                type="text"
-                placeholder="Job Description"
+                    className="form-control"
+                    value={props.title}
+                    name="title"
+                    onChange={props.handleInputChange}
+                    type="text"
+                    placeholder="Job Title"
                 />
             </div>
-            <button onClick={props.handleFormSubmit}>Submit</button>
-        </form>
+        </div>
+        <div className="form-group row mb-3">
+            <label className="col-sm-2 col-form-label">Company</label>
+            <div className="col-sm-10">
+                <input
+                    className="form-control"
+                    value={props.company}
+                    name="company"
+                    onChange={props.handleInputChange}
+                    type="text"
+                    placeholder="Company Name"
+                />
+            </div>
+        </div>
+        <div className="form-group row mb-3">
+            <label className="col-sm-2 col-form-label">Location</label>
+            <div className="col-sm-10">
+                <input
+                    className="form-control"
+                    value={props.location}
+                    name="location"
+                    onChange={props.handleInputChange}
+                    type="text"
+                    placeholder="Location"
+                />
+            </div>
+        </div>
+        <div className="form-group row mb-3">
+            <label className="col-sm-2 col-form-label">Salary</label>
+            <div className="col-sm-10">
+                <input
+                    className="form-control"
+                    value={props.salary}
+                    name="salary"
+                    onChange={props.handleInputChange}
+                    type="text"
+                    placeholder="Salary"
+                />
+            </div>
+        </div>
+        <div className="form-group row mb-3">
+            <label className="col-sm-2 col-form-label">Start Date</label>
+            <div className="col-sm-10">
+                <input
+                    className="form-control"
+                    value={props.startDate}
+                    name="startDate"
+                    onChange={props.handleInputChange}
+                    type="text"
+                    placeholder="Start Date"
+                />
+            </div>
+        </div>
+        <div className="form-group row mb-3">
+            <label className="col-sm-2 col-form-label">Description</label>
+            <div className="col-sm-10">
+                <textarea
+                    className="form-control"
+                    value={props.description}
+                    name="description"
+                    onChange={props.handleInputChange}
+                    type="text"
+                    placeholder="Job Description"
+                ></textarea>
+            </div>
+        </div>
+        <div className="form-group row">
+            {/* <div className="col-sm-10 offset-sm-2">
+                <button className="btn btn-primary" onClick={props.handleFormSubmit}>Submit</button>
+</div> */}
+        </div> 
+    </form>
+       
     );
 }
 

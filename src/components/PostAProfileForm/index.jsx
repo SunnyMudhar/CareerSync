@@ -1,57 +1,86 @@
 import "./style.css";
+import React from 'react';
 
 function PostAProfileForm(props) {
     return (
         <form>
-            <div>
-                <label>Name</label>
-                <input
-                value={props.title}
-                name="name"
-                onChange={props.handleInputChange}
-                type="text"
-                placeholder="Firstname and Surname"
-                />
-                <label>Desired Industry</label>
-                <input
-                value={props.title}
-                name="industry"
-                onChange={props.handleInputChange}
-                type="text"
-                placeholder="Desired Industry"
-                />
-                <label>Location</label>
-                <input
-                value={props.title}
-                name="location"
-                onChange={props.handleInputChange}
-                type="text"
-                placeholder="Location"
-                />
-                <label>Preferred Salary</label>
-                <input
-                value={props.title}
-                name="salary"
-                onChange={props.handleInputChange}
-                type="text"
-                placeholder="Preferred Salary"
-                />
-                <label>Start Date</label>
-                <input
-                value={props.title}
-                name="startDate"
-                onChange={props.handleInputChange}
-                type="text"
-                placeholder="Start Date"
-                />
-                <label>Description</label>
-                <input
-                value={props.title}
-                name="description"
-                onChange={props.handleInputChange}
-                type="text"
-                placeholder="Job Description"
-                />
+            <div className='form-group row mt-3 mb-3'>
+                <label className="col-sm-2 col-form-label">Name</label>
+                <div className="col-sm-10">
+                    <input
+                        className='form-control'
+                        value={props.name}
+                        name="name"
+                        onChange={props.handleInputChange}
+                        type="text"
+                        placeholder="Firstname and Surname"
+                    />
+                </div>
+            </div>
+            <div className='form-group row mb-3'>
+                <label className="col-sm-2 col-form-label">Desired Industry</label>
+                <div className="col-sm-10">
+                    <input
+                        className='form-control'
+                        value={props.industry}
+                        name="industry"
+                        onChange={props.handleInputChange}
+                        type="text"
+                        placeholder="Desired Industry"
+                    />
+                </div>
+            </div>
+            <div className='form-group row mb-3'>
+                <label className="col-sm-2 col-form-label">Location</label>
+                <div className="col-sm-10">
+                    <input
+                        className='form-control'
+                        value={props.location}
+                        name="location"
+                        onChange={props.handleInputChange}
+                        type="text"
+                        placeholder="Location"
+                    />
+                </div>
+            </div>
+            <div className='form-group row mb-3'>
+                <label className="col-sm-2 col-form-label">Preferred Salary</label>
+                <div className="col-sm-10">
+                    <input
+                        className='form-control'
+                        value={props.salary}
+                        name="salary"
+                        onChange={props.handleInputChange}
+                        type="text"
+                        placeholder="Preferred Salary"
+                    />
+                </div>
+            </div>
+            <div className='form-group row mb-3'>
+                <label className="col-sm-2 col-form-label">Start Date</label>
+                <div className="col-sm-10">
+                    <input
+                        className='form-control'
+                        value={props.startDate}
+                        name="startDate"
+                        onChange={props.handleInputChange}
+                        type="text"
+                        placeholder="Start Date"
+                    />
+                </div>
+            </div>
+            <div className='form-group row mb-3'>
+                <label className="col-sm-2 col-form-label">Description</label>
+                <div className="col-sm-10">
+                    <textarea
+                        className='form-control'
+                        value={props.description}
+                        name="description"
+                        onChange={props.handleInputChange}
+                        type="text"
+                        placeholder="Profile Description"
+                    ></textarea>
+                </div>
             </div>
         </form>
     );

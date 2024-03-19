@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PostAJobForm from '../components/PostAJobForm'
 import PostAProfileForm from '../components/PostAProfileForm'
 import CreatePreview from '../components/CreatePreview'
+import './style.css'
 
 const jobData = {
     title: '',
@@ -67,9 +68,23 @@ function PostAForm(props) {
     {handleInputChange} handleFormSubmit={handleFormSubmit} />;
 
     return (
-        <div>
-            <CreatePreview previewData={previewData} />
-            {form}
+        <div className='container-fluid form-container'>
+            <div className='row form-heading mt-5'>
+                <h2>{type === 'job' ? 'CREATE JOB POSTING' : 'CREATE A PROFILE'}</h2>
+            </div>
+            <div className='row mt-3'>
+                <div className='col-md-6'>
+                {form}
+                </div>
+                <div className="col-md-6">
+                    <CreatePreview previewData={previewData} />
+                </div>
+            </div>
+            <div className="row mt-3">
+                <div className="col-md-12 text-center">
+                    <button id='post-form-btn' className="btn btn-primary" onClick={handleFormSubmit}>{type === 'job'? 'POST JOB' : 'POST PROFILE'}</button>
+                </div>
+            </div>
         </div>
     )
 }
