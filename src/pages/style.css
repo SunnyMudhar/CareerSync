@@ -1,8 +1,25 @@
-.form-wrapper {
-    width: 100%;
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
 }
 
-/* #post-job-btn {
+/* .form-container {
+    border: 1px solid black;
+}
+
+.col-md-6 {
+    border: 1px solid black;
+} */
+
+
+.form-heading {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+
+#post-form-btn {
     background-color: rgb(235, 86, 123);
     color: #fff;
     font-family: 'Raleway', sans-serif;
@@ -17,9 +34,6 @@
 
 }
 
-#post-job-btn:hover {
+#post-form-btn:hover {
     transform: scale(1.1);
 }
- */
-
-

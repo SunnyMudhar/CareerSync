@@ -1,0 +1,12 @@
+.preview-container {
+    background-color: #f2f2f2; /* Grey background color */
+    padding: 10px; /* Add padding for spacing */
+    height: 90%;
+    font-family: 'Raleway', sans-serif;
+}
+
+.preview-item {
+    text-align: center; /* Center the text */
+    margin: 0; /* Reset margin */
+    font-weight: 500;
+}
