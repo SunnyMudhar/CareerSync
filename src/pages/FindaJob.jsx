@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Container from '../components/Container';
 import Row from '../components/Row';
-import SearchForm from '../components/JobSearchForm';
-import JobSearchResult from '../components/JobCard';
+import JobSearchForm from '../components/JobSearchForm';
+import JobCard from '../components/JobCard';
 import API from '../utils/API.js';
 
 function FindaJob() {
@@ -17,11 +17,11 @@ function FindaJob() {
   return (
     <Container>
         <h1 className="title">Search for a Job</h1>
-        <SearchForm />
+        <JobSearchForm />
         <Row>
         <div>{jobs.map(job => (
           <div key={job.$id}>
-            <JobSearchResult
+            <JobCard
               title={job.title}
               description={job.description}
               posted={job.$createdAt}
