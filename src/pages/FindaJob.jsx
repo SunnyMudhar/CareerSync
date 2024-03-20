@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Container from '../components/Container';
 import Row from '../components/Row';
-import JobSearchForm from '../components/JobSearchForm';
+import JobSearchForm from 'src/components/jobSearchForm';
 import JobCard from '../components/JobCard';
 import API from '../utils/API.js';
 
