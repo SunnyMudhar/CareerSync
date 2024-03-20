@@ -4,9 +4,6 @@ import React from 'react';
 function PostAJobForm(props) {
     return (
         <form>
-        {/* <div className='row mt-3'>
-            <h1 className='form-heading'>Create Job Posting</h1>
-        </div> */}
         <div className="form-group row mt-3 mb-3">
             <label className="col-sm-2 col-form-label">Title</label>
             <div className="col-sm-10">
@@ -86,9 +83,6 @@ function PostAJobForm(props) {
             </div>
         </div>
         <div className="form-group row">
-            {/* <div className="col-sm-10 offset-sm-2">
-                <button className="btn btn-primary" onClick={props.handleFormSubmit}>Submit</button>
-</div> */}
         </div> 
     </form>
        

@@ -1,11 +1,8 @@
-* {
-  margin: 0;
-  padding: 0, 0, 0, 0;
-  box-sizing: border-box;
-}
-
 .navbar {
-  --bs-navbar-padding-y: 0 !important;
+  position: absolute !important;
+  width: 100%;
+  z-index: 10;
+  --bs-bg-opacity: 0 !important;
 }
 
 .navbar-brand {
@@ -27,11 +24,15 @@
   margin-right: 0 !important;
 }
 
+.logo {
+  width: 100px;
+}
+
 .logo-text {
   font-size: 1.5rem;
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  color: #353535;
+  color: var(--grey);
   margin-top: 10px;
 }
 
@@ -44,12 +45,11 @@
   margin: 0.5rem;
   padding-right: 2rem;
   transition: all 0.3s ease-in-out;
-  display: flex;
   padding-bottom: 20px;
 }
 
 .linkage:hover {
-  color: #d9d9d9;
+  color: var(--lightGrey);
   font-weight: 500;
   transform: scale(1.1);
 }

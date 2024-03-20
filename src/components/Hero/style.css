@@ -1,0 +1,14 @@
+.hero {
+    display: flex;
+    background: linear-gradient(var(--darkBlue), var(--jobSeekerBlue));
+    height: 750px !important;
+    position: relative;
+    justify-content: right;
+    text-align: center;
+}
+
+svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
