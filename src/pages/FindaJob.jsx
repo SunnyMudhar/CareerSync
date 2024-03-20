@@ -1,87 +1,36 @@
-import React, { useState } from 'react';
-import SearchForm from '../components/jobSearchForm';
-import jobData from '../utils/api'
-
-console.log(jobData)
+import React, { useState, useEffect } from 'react';
+import Container from '../components/Container';
+import Row from '../components/Row';
+import SearchForm from '../components/JobSearchForm';
+import JobSearchResult from '../components/JobCard';
+import API from '../utils/API.js';
 
 function FindaJob() {
-  const [searchJob, setSearchJob] = useState({
-    search: '',
-    jobs: [],
-    results: [], 
-    error: '',
-  })
 
-  const inputChangeHandler = (e) => {
-    
-    setSearchJob((prevSearchJob) => ({
-      ...prevSearchJob,
-      search: e.target.value
-    }))
+  const [jobs, setJobs] = useState([])
 
-  }
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault()
-    
-  }
+  useEffect(() => {
+    API.getJobPost()
+    .then((res) => {setJobs(res.documents)});
+  }, [])
 
   return (
-    <div>
-      <SearchForm
-        handleFormSubmit={handleFormSubmit}
-        inputChangeHandler={inputChangeHandler}
-        jobs={searchJob.}
-      />
-    </div>
+    <Container>
+        <h1 className="title">Search for a Job</h1>
+        <SearchForm />
+        <Row>
+        <div>{jobs.map(job => (
+          <div key={job.$id}>
+            <JobSearchResult
+              title={job.title}
+              description={job.description}
+              posted={job.$createdAt}
+             />
+          </div>
+        ))}</div>
+        </Row>
+    </Container>
   )
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const FindAJob = () => {
-  // const [query, setQuery] = useState('');
-  // const [jobs, setJobs] = useState([]);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (query.trim() !== '') {
-      const data = await getJobs(query);
-      setJobs(data);
-    }
-  };
-
-  return (
-    <div>
-      <h1></h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search for jobs..."
-        />
-        <button type="submit">Search</button>
-      </form>
-      <ul>
-        {jobs.map((job) => (
-          <li key={job.id}>{job.title}</li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-export default App;
+export default FindaJob;

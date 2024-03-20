@@ -1,19 +1,19 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import Logo from "../../assets/images/careersync-logo.png";
 import "./style.css";
 
 const NavBar = () => {
   return (
     <>
-      <nav className="navbar sticky-top navbar-expand-lg bg-light">
+      <nav className="navbar sticky-top navbar-expand-lg">
         <div className="container-fluid">
           <div className="navbar-brand">
             <Link to="/">
               <img
                 className="logo"
-                src="src/assets/Logo.png"
-                alt="Logo"
-                width="100"
+                src= { Logo }
+                alt="career sync logo"
               />
             </Link>
             <h4 className="logo-text">CAREERSYNC</h4>
