@@ -1,3 +1,4 @@
+
 import { Link, NavLink } from "react-router-dom";
 import Hero from "../components/Hero";
 import styled from "styled-components";
@@ -5,7 +6,6 @@ import styled from "styled-components";
 const Content = styled.div`
   margin-top: 250px;
 `
-
 const H1 = styled.h1`
   margin-bottom: 2.5rem;
   font-family: "Raleway", sans-serif;
