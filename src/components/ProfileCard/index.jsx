@@ -15,13 +15,13 @@ function ProfileCard(props) {
           <p>
             Location: {props.location}
           </p>
-          <button type="button" className="btn btn-primary btn-expand" data-bs-toggle="modal" data-bs-target="#profileModal">
+          <button type="button" className="btn btn-primary btn-expand" data-bs-toggle="modal" data-bs-target={`#${props.id}`}>
             Expand
           </button>
         </div>
       </div>
     </div>
-    <div className="modal fade" id="profileModal" tabIndex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+    <div className="modal fade" id={props.id} tabIndex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-dialog-centered">
         <div className="modal-content">
           <div className="modal-header">

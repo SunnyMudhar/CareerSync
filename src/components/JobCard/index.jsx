@@ -15,13 +15,13 @@ function JobCard(props) {
           <p>
             Location: {props.location}
           </p>
-          <button type="button" className="btn btn-primary btn-expand" data-bs-toggle="modal" data-bs-target="#jobModal">
+          <button type="button" className="btn btn-primary btn-expand" data-bs-toggle="modal" data-bs-target={`#${props.id}`}>
             Expand
           </button>
         </div>
       </div>
     </div>
-    <div className="modal fade" id="jobModal" tabIndex="-1" aria-labelledby="jobModalLabel" aria-hidden="true">
+    <div className="modal fade" id={props.id} tabIndex="-1" aria-labelledby="jobModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-dialog-centered">
         <div className="modal-content">
           <div className="modal-header">

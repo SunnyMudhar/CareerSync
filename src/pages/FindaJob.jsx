@@ -69,6 +69,7 @@ function FindaJob() {
           <div>{jobSearchData.jobs.map(job => (
             <div key={job.$id}>
               <JobCard
+                id={job.$id}
                 title={job.title}
                 company={job.company}
                 location={job.location}

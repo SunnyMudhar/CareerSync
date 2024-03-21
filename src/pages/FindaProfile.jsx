@@ -69,6 +69,7 @@ function FindAProfile() {
           <div>{profileSearchData.profiles.map(profile => (
             <div key={profile.$id}>
               <ProfileCard
+                id={profile.$id}
                 name={profile.name}
                 desiredIndustry={profile.desiredIndustry}
                 location={profile.location}
