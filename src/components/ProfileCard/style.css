@@ -1,11 +1,11 @@
-.job-card {
+.profile-card {
     border-radius: 0 !important;
     transition: all .2s ease-in-out;
     height: 150px !important;
     margin-bottom: 15px;
 }
 
-.job-card:hover {
+.profile-card:hover {
     transform: scale(1.025);
     box-shadow: 0 0 10px 5px var(--lightGrey);
 }
@@ -36,7 +36,7 @@
 }
 
 @media (max-width: 768px) {
-    .job-card {
+    .profile-card {
         height: auto;
     }
 }

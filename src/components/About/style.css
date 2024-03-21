@@ -1,0 +1,14 @@
+.about-us {
+    margin-bottom: 25px;
+}
+
+.mission-statement {
+    margin-bottom: 25px;
+    text-align: end;
+}
+
+@media screen and (max-width: 1110px) {
+    .about {
+        text-align: center;
+    }
+}
