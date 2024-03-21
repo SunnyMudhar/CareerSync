@@ -5,7 +5,6 @@ import Home from "./pages/Home.jsx";
 import FindAJob from "./pages/FindaJob.jsx"
 import FindAProfile from "./pages/FindaProfile.jsx"
 import PostAForm from "./pages/PostAForm.jsx";
-import Footer from "./components/Footer";
 
 const AppContainer = styled.div`
   margin: 0 auto;
@@ -25,7 +24,6 @@ const App = () => {
           <Route path="/postaprofile" element={<PostAForm type="profile" />} />
         </Routes>
       </Router>
-      <Footer />
     </AppContainer>
   );
 };
