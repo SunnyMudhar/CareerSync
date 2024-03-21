@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
+import Banner from '../components/Banner';
 import PostAJobForm from '../components/PostAJobForm'
 import PostAProfileForm from '../components/PostAProfileForm'
 import CreatePreview from '../components/CreatePreview'
 import styled from "styled-components";
 import API from '../utils/API';
-import { COLLECTION_ID_JOBS, DATABASE_ID, databases } from '../utils/appwriteConfig';
 
 const FormHeading = styled.h2 `
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
+    margin-top: 1rem;
+    color: #ffffff;
 `;
 
 const SubmitBtn = styled.button `
     background-color: rgb(235, 86, 123);
     color: #fff;
-    font-family: 'Raleway', sans-serif;
     font-size: 1.2rem;
     font-weight: 500; 
     width: 200px; 
     border: none; 
     border-radius: 50px;
     padding: 10px 20px;
+    margin: 50px 50px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     &:hover {
@@ -80,10 +80,11 @@ function PostAForm(props) {
     {handleInputChange} handleFormSubmit={handleFormSubmit} />;
 
     return (
+        <>
+        <Banner>
+            <FormHeading className="title">{type === 'job' ? 'CREATE JOB POSTING' : 'CREATE A PROFILE'}</FormHeading>
+        </Banner>
         <div className='container-fluid form-container'>
-            <div className='row mt-5'>
-                <FormHeading>{type === 'job' ? 'CREATE JOB POSTING' : 'CREATE A PROFILE'}</FormHeading>
-            </div>
             <div className='row mt-3'>
                 <div className='col-md-6'>
                     {form}
@@ -98,6 +99,7 @@ function PostAForm(props) {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

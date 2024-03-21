@@ -1,14 +1,13 @@
-
 import { Link, NavLink } from "react-router-dom";
 import Hero from "../components/Hero";
+import About from "../components/About";
+import Carousel from "../components/Carousel";
 import styled from "styled-components";
 
 const Content = styled.div`
-  margin-top: 250px;
+  margin-top: 200px;
 `
 const H1 = styled.h1`
-  margin-bottom: 2.5rem;
-  font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
   color: #ffffff;
@@ -18,7 +17,6 @@ const HomeBtn = styled.div`
   height: 80px;
   .btn-general {
     color: #ffffff;
-    font-family: "Raleway", sans-serif;
     font-size: 1.2rem;
     font-weight: 500;
     width: 200px;
@@ -47,6 +45,7 @@ const HomeBtn = styled.div`
 
 const Home = () => {
   return (
+    <>
     <Hero>
       <Content>
         <H1>CONNECTING THE RIGHT TALENT TO THE RIGHT ORGANISATION</H1>
@@ -60,6 +59,9 @@ const Home = () => {
         </HomeBtn>
       </Content>
     </Hero>
+    <About />
+    <Carousel />
+    </>
   );
 };
 

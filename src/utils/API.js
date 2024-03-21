@@ -1,15 +1,36 @@
-import { ID } from 'appwrite';
+import { ID, Query } from 'appwrite';
 import { databases, DATABASE_ID, COLLECTION_ID_JOBS, COLLECTION_ID_PROFILES } from './appwriteConfig';
 
 export default {
-    getJobPost: async () => {
+    getJobPost: async (title = '', location = '') => {
+        const queries = [];
+        if (title !== '') {
+            queries.push(Query.search('title', title));
+        }
+        if (location !== '') {
+            queries.push(Query.search('location', location));
+        }
+        console.log(queries);
         return await databases.listDocuments(
             DATABASE_ID,
-            COLLECTION_ID_JOBS
+            COLLECTION_ID_JOBS,
+            queries
             );
     },
-    getProfilePost: async () => {
-        return await databases.listDocuments(DATABASE_ID, COLLECTION_ID_PROFILES);
+    getProfilePost: async (industry = '', location = '') => {
+        const queries = [];
+        console.log(industry);
+        if (industry !== '') {
+            queries.push(Query.search('desiredIndustry', industry));
+        }
+        if (location !== '') {
+            queries.push(Query.search('location', location));
+        }
+        return await databases.listDocuments(
+            DATABASE_ID,
+            COLLECTION_ID_PROFILES,
+            queries
+            );
     },
     postJob: async (data) => {
 

@@ -1,0 +1,25 @@
+.search {
+    width: 100%;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-input {
+    flex: 1;
+    margin-right: 10px; /* Adjust as needed */
+}
+
+.btn-search {
+    border-radius: 50px !important;
+    background-color: var(--grey) !important;
+    color: white !important;
+}
+
+.btn-search:hover {
+    background-color: var(--lightGrey) !important;
+    color: var(--grey) !important;
+}

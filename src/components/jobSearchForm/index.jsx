@@ -1,38 +1,35 @@
-import React from "react";
+import './style.css';
 
 function SearchForm(props) {
     return (
         <form className="search">
-            <div className="mb-3">
-                <label htmlFor="job" className="form-label">
-                Job Title
-                </label>
-                <input
-                value={props.search}
-                onChange={props.handleInputChange}
-                name="job-title"
-                type="text"
-                className="form-control"
-                placeholder="Search for a job"
-                id="job-title"
-                />
-                <label htmlFor="job" className="form-label">
-                Job Location
-                </label>
-                <input
-                value={props.search}
-                onChange={props.handleInputChange}
-                name="job-location"
-                type="text"
-                className="form-control"
-                defaultValue="Birmingham"
-                placeholder="Location"
-                id="job-location"
-                />
+            <div className="mb-3 search-container">
+                <div className='search-input'>
+                    <input
+                    value={props.title}
+                    onChange={props.handleInputTitle}
+                    name="title"
+                    type="text"
+                    className="form-control"
+                    placeholder="Job Title"
+                    id="job-title"
+                    />
+                </div>
+                <div className='search-input'>
+                    <input
+                    value={props.location}
+                    onChange={props.handleInputLocation}
+                    name="location"
+                    type="text"
+                    className="form-control"
+                    placeholder="Location, e.g Birmingham"
+                    id="job-location"
+                    />
+                </div>
                 <button
                 type="submit"
                 onClick={props.handleFormSubmit}
-                className="btn btn-success"
+                className="btn btn-search"
                 >
                 Search
                 </button>

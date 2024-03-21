@@ -16,7 +16,9 @@ const NavBar = () => {
                 alt="career sync logo"
               />
             </Link>
-            <h4 className="logo-text">CAREERSYNC</h4>
+            <NavLink className="logo-text" to="/">
+                CAREERSYNC
+            </NavLink>
           </div>
           <button
             type="button"
@@ -34,6 +36,12 @@ const NavBar = () => {
               <li className="nav-item">
                 <NavLink className="linkage" to="/findajob">
                   FIND A JOB
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink className="linkage" to="/findaprofile">
+                  FIND TALENT
                 </NavLink>
               </li>
 

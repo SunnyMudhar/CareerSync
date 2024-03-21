@@ -6,13 +6,13 @@ function SearchForm(props) {
             <div className="mb-3 search-container">
                 <div className='search-input'>
                     <input
-                    value={props.title}
+                    value={props.desiredIndustry}
                     onChange={props.handleInputTitle}
-                    name="title"
+                    name="desiredIndustry"
                     type="text"
                     className="form-control"
-                    placeholder="Job Title"
-                    id="job-title"
+                    placeholder="Desired Industry"
+                    id="profile-desiredIndustry"
                     />
                 </div>
                 <div className='search-input'>
@@ -23,7 +23,7 @@ function SearchForm(props) {
                     type="text"
                     className="form-control"
                     placeholder="Location, e.g Birmingham"
-                    id="job-location"
+                    id="profile-location"
                     />
                 </div>
                 <button
