@@ -65,7 +65,7 @@ function PostAProfileForm(props) {
                         name="startDate"
                         onChange={props.handleInputChange}
                         type="text"
-                        placeholder="Start Date"
+                        placeholder="Start Date (MM/DD/YYYY)"
                     />
                 </div>
             </div>

@@ -5,6 +5,7 @@ import Home from "./pages/Home.jsx";
 import FindAJob from "./pages/FindaJob.jsx"
 import FindAProfile from "./pages/FindaProfile.jsx"
 import PostAForm from "./pages/PostAForm.jsx";
+import { Toaster } from 'react-hot-toast';
 
 const AppContainer = styled.div`
   margin: 0 auto;
@@ -14,6 +15,7 @@ const AppContainer = styled.div`
 const App = () => {
   return (
     <AppContainer>
+      <Toaster position = "top-right" />
       <Router>
         <NavBar />
         <Routes>

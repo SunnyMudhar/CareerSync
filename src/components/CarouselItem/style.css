@@ -1,3 +1,7 @@
 .review-card {
     width: 75% !important;
 }
+
+.content {
+    text-align: center !important;
+}
