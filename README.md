@@ -29,15 +29,15 @@ Welcome to Career Sync, where job seekers and employers seamlessly connect.
   ### Figma
   Using Figma, we were able to wireframe out our design ideas. Providing our design team with a template to build the foundations for our site.
 
-    <p align="center">
-    <img src="src/assets/readme/figma-wireframe.png" alt="Figma WireFrame" />
-    </p>
+  <p align="center">
+  <img src="src/assets/readme/figma-wireframe.png" alt="Figma WireFrame" />
+  </p>
 
   ### Home Page
 
-    <p align="center">
-    <img src="/src/assets/readme/homepage.png" alt="Home Page" />
-    </p>
+  <p align="center">
+  <img src="src/assets/readme/homepage.png" alt="Home Page" />
+  </p>
 
   ## Table of Contents
   * [Installation](#Installation)

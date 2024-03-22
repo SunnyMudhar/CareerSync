@@ -52,10 +52,10 @@ const Home = () => {
       <Content>
         <H1>CONNECTING THE RIGHT TALENT TO THE RIGHT ORGANISATION</H1>
         <HomeBtn>
-          <Link to="/findajob">
+          <Link to="/findaprofile">
             <button className="btn-general btn-talent">SEARCH TALENT</button>
           </Link>
-          <Link to="/postajob">
+          <Link to="/findajob">
             <button className="btn-general btn-job">SEARCH JOB</button>
           </Link>
         </HomeBtn>

@@ -33,28 +33,39 @@ const NavBar = () => {
             id="navbarCollapse"
           >
             <ul className="navbar-nav">
-              <li className="nav-item">
-                <NavLink className="linkage" to="/findajob">
-                  FIND A JOB
-                </NavLink>
+              <li className="nav-item dropdown linkage">
+                <a className="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  JOB SEEKERS
+                </a>
+                <ul className="dropdown-menu">
+                  <li className="dropdown-item nav-item">
+                    <NavLink className="linkage" to="/findajob">
+                      FIND A JOB
+                    </NavLink>
+                  </li>
+                  <li className="dropdown-item nav-item">
+                    <NavLink className="linkage" to="/postaprofile">
+                      POST A PROFILE
+                    </NavLink>
+                  </li>
+                </ul>
               </li>
-
-              <li className="nav-item">
-                <NavLink className="linkage" to="/findaprofile">
-                  FIND TALENT
-                </NavLink>
-              </li>
-
-              <li className="nav-item">
-                <NavLink className="linkage" to="/postajob">
-                  POST A JOB
-                </NavLink>
-              </li>
-
-              <li className="nav-item">
-                <NavLink className="linkage" to="/postaprofile">
-                  POST A PROFILE
-                </NavLink>
+              <li className="nav-item dropdown linkage">
+                <a className="nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  EMPLOYERS
+                </a>
+                <ul className="dropdown-menu">
+                  <li className="dropdown-item nav-item">
+                    <NavLink className="linkage" to="/findaprofile">
+                      FIND TALENT
+                    </NavLink>
+                  </li>
+                  <li className="dropdown-item nav-item">
+                    <NavLink className="linkage" to="/postajob">
+                      POST A JOB
+                    </NavLink>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>

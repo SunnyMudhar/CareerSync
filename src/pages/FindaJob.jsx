@@ -25,8 +25,8 @@ function FindaJob() {
   });
 
   const handleInputTitle = (event) => {
-    setjobSearchData((prevSearchData) => ({
-      ...prevSearchData,
+    setjobSearchData((search) => ({
+      ...search,
       searchQuery: {
         title: event.target.value,
       },
@@ -34,8 +34,8 @@ function FindaJob() {
   }
 
   const handleInputLocation = (event) => {
-    setjobSearchData((prevSearchData) => ({
-      ...prevSearchData,
+    setjobSearchData((search) => ({
+      ...search,
       searchQuery: {
         location: event.target.value,
       },

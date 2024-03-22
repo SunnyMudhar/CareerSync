@@ -23,6 +23,27 @@
   margin-right: 0 !important;
 }
 
+.nav-link {
+  color: var(--grey) !important;
+}
+
+.nav-link:hover {
+  color: var(--lightGrey) !important;
+}
+
+.dropdown {
+  margin-right: 50px !important;
+}
+
+.dropdown-menu {
+  background-color: transparent !important;
+  border: 0px !important;
+}
+
+.dropdown-item:hover {
+  background-color: transparent !important;
+}
+
 .logo {
   width: 75px;
   padding-right: 5px;
@@ -44,11 +65,10 @@
   margin: 0.5rem;
   padding-right: 2rem;
   transition: all 0.3s ease-in-out;
-  padding-bottom: 20px;
 }
 
 .linkage:hover {
-  color: var(--lightGrey);
+  color: var(--lightGrey) !important;
   font-weight: 500;
-  transform: scale(1.1);
+  transform: scale(1.02);
 }
