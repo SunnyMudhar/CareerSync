@@ -25,8 +25,8 @@ function FindAProfile() {
   });
 
   const handleInputIndustry = (event) => {
-    setprofileSearchData((prevSearchData) => ({
-      ...prevSearchData,
+    setprofileSearchData((search) => ({
+      ...search,
       searchQuery: {
         industry: event.target.value,
       },
@@ -34,8 +34,8 @@ function FindAProfile() {
   }
 
   const handleInputLocation = (event) => {
-    setprofileSearchData((prevSearchData) => ({
-      ...prevSearchData,
+    setprofileSearchData((search) => ({
+      ...search,
       searchQuery: {
         location: event.target.value,
       },

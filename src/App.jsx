@@ -4,7 +4,8 @@ import styled from "styled-components";
 import Home from "./pages/Home.jsx";
 import FindAJob from "./pages/FindaJob.jsx"
 import FindAProfile from "./pages/FindaProfile.jsx"
-import PostAForm from "./pages/PostAForm.jsx";
+import PostAJobForm from "./pages/PostAJobForm.jsx"
+import PostAProfileForm from "./pages/PostAProfileForm.jsx"
 import { Toaster } from 'react-hot-toast';
 
 const AppContainer = styled.div`
@@ -22,8 +23,8 @@ const App = () => {
           <Route path="/" exact element={<Home />} />
           <Route path="/findajob" element={<FindAJob />} />
           <Route path="/findaprofile" element={<FindAProfile />} />
-          <Route path="/postajob" element={<PostAForm type="job" />} />
-          <Route path="/postaprofile" element={<PostAForm type="profile" />} />
+          <Route path="/postajob" element={<PostAJobForm />} />
+          <Route path="/postaprofile" element={<PostAProfileForm />} />
         </Routes>
       </Router>
     </AppContainer>

@@ -6,7 +6,6 @@ function SearchForm(props) {
             <div className="mb-3 search-container">
                 <div className='search-input'>
                     <input
-                    value={props.desiredIndustry}
                     onChange={props.handleInputTitle}
                     name="desiredIndustry"
                     type="text"
@@ -17,7 +16,6 @@ function SearchForm(props) {
                 </div>
                 <div className='search-input'>
                     <input
-                    value={props.location}
                     onChange={props.handleInputLocation}
                     name="location"
                     type="text"

@@ -20,6 +20,7 @@ export default {
     getProfilePost: async (industry = '', location = '') => {
         const queries = [];
         console.log(industry);
+        console.log(location);
         if (industry !== '') {
             queries.push(Query.search('desiredIndustry', industry));
         }
