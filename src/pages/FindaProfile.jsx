@@ -3,8 +3,9 @@ import Banner from '../components/Banner';
 import Container from '../components/Container';
 import Row from '../components/Row';
 import ProfileSearchForm from '../components/ProfileSearchForm';
-import ProfileCard from '../components/ProfileCard';
+import Card from '../components/Card';
 import API from '../utils/API.js';
+import Alert from '../components/Alert';
 import styled from "styled-components";
 
 const FormHeading = styled.h2`
@@ -43,15 +44,26 @@ function FindAProfile() {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
+
+    if(profileSearchData.searchQuery.industry === '' && profileSearchData.searchQuery.location === '') {
+      Alert("error", "Please Enter an Industry or Location");
+      console.log("ERR: no params detected for search query");
+      return;
+    }
+
     API.getProfilePost(profileSearchData.searchQuery.industry, profileSearchData.searchQuery.location)
       .then((res) => {
         if (res.documents.code === 400 || res.documents.code === 404 || res.documents.code === 500) {
           throw new Error(res.documents.message);
+        } else if (res.total === 0) {
+          Alert("error", "No Results Found");
         }
         setprofileSearchData({...profileSearchData, profiles: res.documents });
       })
-      .catch((err) => setprofileSearchData({ ...profileSearchData, error: err.message }));
-      console.log("ERR: ", profileSearchData.error);
+      .catch((err) => {
+        setprofileSearchData({ ...profileSearchData, error: err.message });
+        Alert("error", err);
+      });
   };
 
   return (
@@ -68,15 +80,15 @@ function FindAProfile() {
           <Row>
           <div>{profileSearchData.profiles.map(profile => (
             <div key={profile.$id}>
-              <ProfileCard
+              <Card
                 id={profile.$id}
-                name={profile.name}
-                desiredIndustry={profile.desiredIndustry}
-                location={profile.location}
-                preferredSalary={profile.preferredSalary}
-                startDate={profile.startDate}
-                description={profile.description}
-                posted={profile.$createdAt}
+                title={profile.name}
+                company={["Desired Industry: ", profile.desiredIndustry]}
+                location={["Location: ", profile.location]}
+                salary={["Preferred Salary: ", profile.preferredSalary]}
+                startDate={["Ideal Start Date: ", profile.startDate]}
+                description={["Description: ", profile.description]}
+                posted={["Posted on: ", profile.$createdAt]}
               />
             </div>
           ))}</div>

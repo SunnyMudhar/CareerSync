@@ -4,6 +4,7 @@ import PostAJobForm from '../components/PostAJobForm'
 import PostAProfileForm from '../components/PostAProfileForm'
 import CreatePreview from '../components/CreatePreview'
 import styled from "styled-components";
+import Alert from '../components/Alert';
 import API from '../utils/API';
 
 const FormHeading = styled.h2 `
@@ -66,6 +67,21 @@ function PostAForm(props) {
     const handleFormSubmit = async (event) => {
 
         event.preventDefault();
+
+        let errorMessage = '';
+        const requireData = Object.values(formData)
+
+        requireData.map(req => {
+            if (req === '') {
+                errorMessage = "Please Fill out All Fields";
+                return;
+            }
+        });
+
+        if(errorMessage !== '') {
+            Alert("error", errorMessage);
+            return;
+        }
 
         if (type === "job") {
             API.postJob(formData);

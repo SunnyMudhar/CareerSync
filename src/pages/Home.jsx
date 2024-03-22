@@ -14,6 +14,7 @@ const H1 = styled.h1`
 `;
 
 const HomeBtn = styled.div`
+  margin-top: 15px;
   height: 80px;
   .btn-general {
     color: #ffffff;
@@ -39,6 +40,7 @@ const HomeBtn = styled.div`
   }
 
   .btn-job {
+    margin-top: 15px;
     background-color: rgb(235, 86, 123);
   }
 `;
