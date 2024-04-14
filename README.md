@@ -59,7 +59,7 @@ Welcome to Career Sync, where job seekers and employers seamlessly connect.
   
   ## Contributors
 
-  * [Suniel Mudhar](https://github.com/sunielmudhar/)
+  * [Sunny Mudhar](https://github.com/sunnymudhar/)
   * [Irtiza Safdar](https://github.com/irtiza-S/)
   * [Sing Lung Louie](https://github.com/Louie888A/)
 
