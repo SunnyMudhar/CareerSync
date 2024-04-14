@@ -51,7 +51,7 @@ Welcome to Career Sync, where job seekers and employers seamlessly connect.
   ### Prerequisites:
   Node.js and npm (Node Package Manager) should be installed. You can download and install them from the official Node.js website.
 
-  * Clone Repository: git clone https://github.com/sunielmudhar/CareerSync
+  * Clone Repository: git clone https://github.com/sunnymudhar/CareerSync
   * Navigate to Directory: cd CareerSync
   * Install Dependencies: npm install or npm i
   * Run Development Server: npm run dev
